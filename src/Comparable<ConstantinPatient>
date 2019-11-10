@@ -1,0 +1,4 @@
+public interface Comparable<ConstantinPatient>
+{
+   public int compareTo(ConstantinPatient p);
+}
