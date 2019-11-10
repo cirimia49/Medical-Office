@@ -1,0 +1,10 @@
+public interface ConstantinCollection<T>
+{
+   void sort();
+   void add(T val);
+   void print();
+   int size();
+   boolean contains(T val);
+   
+
+}
