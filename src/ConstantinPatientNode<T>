@@ -1,0 +1,17 @@
+public class ConstantinPatientNode<T>
+{
+   T  val;
+   ConstantinPatientNode<T> next;
+   
+   public ConstantinPatientNode()
+   {
+   }
+   public ConstantinPatientNode(T val)
+   {
+      this.val = val;
+   }
+   public String toString()
+   {
+      return String.valueOf(val);
+   }
+}
