@@ -1,0 +1,19 @@
+public interface ConstantinBSTInterface
+{
+
+   boolean isEmpty();
+   
+   void insert(ConstantinPatient data);
+   
+   void postOrder();
+   void postOrder(ConstantinBSTNode r);
+   
+   void inOrder();
+   void inOrder(ConstantinBSTNode r);
+   
+   void preOrder();
+   void preOrder(ConstantinBSTNode r);
+   
+   boolean search(ConstantinPatient val);
+   boolean search(ConstantinBSTNode r, ConstantinPatient val);
+}
