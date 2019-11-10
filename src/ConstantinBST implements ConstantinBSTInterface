@@ -1,0 +1,104 @@
+public class ConstantinBST implements ConstantinBSTInterface
+{
+   private ConstantinBSTNode root;
+   
+   
+   public ConstantinBST()
+   {
+      root = null;
+   }
+   public boolean isEmpty()
+   {
+      return root == null;
+   }
+   
+   public void insert (ConstantinPatient data)
+   {
+      root = insert(root,data);
+   }
+   
+   public ConstantinBSTNode insert(ConstantinBSTNode node, ConstantinPatient data)
+   {
+      if(node == null)
+         node = new ConstantinBSTNode(data);
+      else
+      {
+         if(node.getRight() == null)
+            node.right = insert(node.right, data);
+         else
+            node.left = insert(node.left, data);   
+      } 
+      return node;  
+   }
+   
+   public void preOrder()
+   {
+      preOrder(root);
+   }
+   
+   public void preOrder(ConstantinBSTNode r)
+   {
+      if(r != null)
+      {
+         System.out.print(r.getData() + " ");
+         preOrder(r.getLeft());
+         preOrder(r.getRight());
+      }
+   }
+   
+   public boolean search(ConstantinPatient val)
+   {
+      return search(root, val);
+   }
+   
+   public boolean search(ConstantinBSTNode r, ConstantinPatient val)
+   {
+      if(r.getData() == val.getinsurancePolicyNumber())
+         return true;
+      if(r.getLeft() != null)
+         if(search(r.getLeft(), val))
+            return true;
+            
+      if(r.getRight() != null)
+         if(search(r.getRight(), val))
+            return true;
+            
+      return false;
+               
+   }
+   
+   public void postOrder()
+   {
+      postOrder(root);
+   }
+   
+   public void postOrder(ConstantinBSTNode r)
+   {
+      if( r != null)
+      {
+         
+         postOrder(r.getLeft());
+         postOrder(r.getRight());
+         System.out.print(r.getData() + " ");
+      }
+   }
+   
+   
+   public void inOrder()
+   {
+      inOrder(root);
+   }
+   
+   public void inOrder(ConstantinBSTNode r)
+   {
+      if( r != null)
+      {
+         
+         inOrder(r.getLeft());
+         System.out.print(r.getData() + " ");
+         inOrder(r.getRight());
+         
+      }
+   }
+
+}
