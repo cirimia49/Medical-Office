@@ -6,7 +6,7 @@ Patiens can find out the date and time when they have an appionment at the clini
 
 Doctors can choose from a list of possible operations as: what patients they have to see in that day, personal history of a patient or the insurance provider and the biggest coverage of a specific patient. 
 
-Application was created mainly to use Abstract Data Types as BST, Collections, List, Queue and object creation. All ADTs implement interfaces and communicate with objects and Generics.
+Application was created mainly to use Abstract Data Types as BST, Collections, List, Queue and object creation(Constantin). All ADTs implement interfaces and communicate with objects and Generics.
 
 It is using some of the main principles in Object Oriented Programming as Encapsulation (data hiding and abstraction), and Polymorphism (use of interfaces in this case).
 
