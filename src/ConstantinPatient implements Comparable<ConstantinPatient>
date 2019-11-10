@@ -1,0 +1,112 @@
+public class ConstantinPatient implements Comparable<ConstantinPatient>
+{
+   private String name;
+   private String nameOfDoctor;
+   private String yearOfBirth;
+   private String hourAppoinment;
+   private String minute;
+   private String room;
+   
+   private int insurancePolicyNumber;
+   
+   public ConstantinPatient(String name, String nD, String h, String minute, String room, String y)
+   {
+      this.name = name;
+      this.nameOfDoctor = nD;
+      
+      this.hourAppoinment = h;
+      this.minute = minute;
+      
+      this.room = room;
+      this.yearOfBirth = y;
+      
+   }
+   
+  public ConstantinPatient(int id)
+   {
+      this.insurancePolicyNumber = id;
+   }
+   public int getinsurancePolicyNumber()
+   {
+      return this.insurancePolicyNumber;
+   }
+
+   
+   public void setName(String name)
+   {
+      this.name = name;
+   }
+   
+   public String getName()
+   {
+      return this.name;
+   }
+   
+   public void setNameOfDoctor(String n)
+   {
+      this.nameOfDoctor = n;
+   }
+   
+   public String getNameOfDoctor()
+   {
+      return this.nameOfDoctor;
+   }
+
+   public void setYearOfBirth(String y)
+   {
+      this.yearOfBirth = y;
+   }
+   
+   public String getYearOfBirth()
+   {
+      return this.yearOfBirth;
+   }
+   
+   public void setHourAppoinment(String h)
+   {
+      this.hourAppoinment = h;
+   }
+   
+   public String getHourAppoinment()
+   {
+      return this.hourAppoinment;
+   }
+   
+   public void setMinute(String m)
+   {
+      this.minute = m;
+   }
+   
+   public String getMinute()
+   {
+      return this.minute;
+   }
+   
+   public void setRoom(String r)
+   {
+      this.room = r;
+   }
+   
+   public String getRoom()
+   {
+      return this.room;
+   }
+   
+ 
+   
+   @Override
+   public String toString()
+   {
+      return ( this.name + ", appoinment at: " + this.nameOfDoctor + "," +
+      "\n"+" at: " + this.hourAppoinment + ":" + this.minute + " room No: " + this.room); 
+   }
+   
+   @Override
+   public int compareTo(ConstantinPatient p)
+   {
+      return this.name.compareTo(p.name);
+   }
+
+   
+  
+}
