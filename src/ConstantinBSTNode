@@ -1,0 +1,52 @@
+public class ConstantinBSTNode
+{
+   
+   ConstantinBSTNode left, right;
+   ConstantinPatient data;
+   
+   public ConstantinBSTNode()
+   {
+      left = null;
+      right = null;
+      int x = 0;
+      ConstantinPatient y = new ConstantinPatient(x);
+      
+   }
+   
+   public ConstantinBSTNode( ConstantinPatient n)
+   {
+   
+      left = null;
+      right = null;
+      data = n;
+   }
+   
+   public void setLeft(ConstantinBSTNode n)
+   {
+      left = n;
+   }
+   public void setRight(ConstantinBSTNode n)
+   {
+      right = n;
+   }
+   
+   public ConstantinBSTNode getLeft()
+   {
+      return left;
+   }
+   public ConstantinBSTNode getRight()
+   {
+      return right;
+   }
+   
+   public void setData(ConstantinPatient d)
+   {
+      data = d;
+   }
+   
+   public int getData()
+   {
+      return data.getinsurancePolicyNumber();
+   }
+
+}
