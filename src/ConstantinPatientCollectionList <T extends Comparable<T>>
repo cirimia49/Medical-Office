@@ -1,0 +1,97 @@
+public class ConstantinPatientCollectionList <T extends Comparable<T>> implements ConstantinCollection<T>
+{
+   ConstantinPatientNode <T> root;
+   
+   
+   public void sort()
+   {
+        boolean sorted = false;        
+        for (int i = 0; i < size() && !sorted; i++)
+        {
+            ConstantinPatientNode<T> r = root;
+            ConstantinPatientNode<T> r2 = r.next;
+            
+            sorted = true;
+            
+            while(r2 != null)
+            {
+                if(r.val.compareTo(r2.val) > 0)
+                {
+                    T temp = r2.val;
+                    r2.val = r.val;
+                    r.val = temp;
+                    sorted = false;
+                }
+                r2 = r2.next;
+                r = r.next;
+            }
+         }
+     }
+
+   
+    public void add(T val) 
+    {
+        ConstantinPatientNode<T> temp = new ConstantinPatientNode<>(val);
+        if (root == null)
+        {
+            root = temp;
+        }
+        else
+        {
+            ConstantinPatientNode<T> r = root;
+            while(r.next != null)
+            {
+                r = r.next;
+            }
+            r.next = temp;
+        }
+    }
+    
+    public void print()
+    {
+        ConstantinPatientNode <T> r = root;
+        while(r != null)
+        {
+            System.out.print(r.val + " " );
+            System.out.println();
+            r = r.next;
+        }
+        System.out.println();
+
+    }
+    
+     public int size()
+    {
+        int counter = 0;
+        ConstantinPatientNode<T> r = root;
+        while(r != null) 
+        {
+           counter++;
+           r = r.next; 
+        }
+        return counter;
+    } 
+    
+    public boolean contains(T val)
+    {
+        if(root == null)
+            return false;
+                
+        ConstantinPatientNode<T> r = root;
+        while(r != null)
+        {
+            if(r.val.compareTo(val) == 0)
+            {
+                return true;
+            }
+            r = r.next;
+        }
+        return false;
+    }
+ 
+
+    
+    
+
+
+}
