@@ -1,0 +1,10 @@
+public interface  ConstantinQueueInterface
+{
+  boolean enqueue(ConstantinPatient item);
+  ConstantinPatient dequeue();
+  boolean isFull();;
+  void  showAllque();
+
+
+
+}
